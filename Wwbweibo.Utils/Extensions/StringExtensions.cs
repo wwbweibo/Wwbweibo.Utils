@@ -14,5 +14,10 @@ namespace Core.Extensions.Utils
         {
             return Encoding.GetEncoding(encoding).GetString(data);
         }
+
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
     }
 }

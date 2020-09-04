@@ -16,5 +16,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Wwbweibo.Utils\Wwbweibo.Utils.csproj" />
   </ItemGroup>
-
 </Project>

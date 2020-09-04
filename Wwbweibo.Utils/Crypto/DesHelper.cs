@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
+using Wwbweibo.Utils.Asserts;
 
 namespace Wwbweibo.Utils.Crypto
 {
@@ -9,10 +9,15 @@ namespace Wwbweibo.Utils.Crypto
     {
         public static byte[] DesEncrypt(byte[] data, byte[] key, byte[] IV)
         {
-            using var provider = new DESCryptoServiceProvider();
+            AssertHelper.AssertNullOrEmpty(data, "input data can not be null or empty");
+            AssertHelper.AssertNullOrEmpty(key, "Key can not be null or empty");
 
-            provider.Key = HandleKey(key);
-            provider.IV = IV.Length == 8 ? IV : new byte[8];
+            using var provider = new DESCryptoServiceProvider
+            {
+                Key = HandleKey(key),
+                IV = IV?.Length == 8 ? IV : new byte[8]
+            };
+
             using var ct = provider.CreateEncryptor();
             using var ms = new MemoryStream();
             using var cs = new CryptoStream(ms, ct, CryptoStreamMode.Write);
@@ -23,9 +28,14 @@ namespace Wwbweibo.Utils.Crypto
 
         public static byte[] DesDecrypt(byte[] data, byte[] key, byte[] IV)
         {
-            using var provider = new DESCryptoServiceProvider();
-            provider.Key = HandleKey(key);
-            provider.IV = IV.Length == 8 ? IV : new byte[8];
+            AssertHelper.AssertNullOrEmpty(data, "input data can not be null or empty");
+            AssertHelper.AssertNullOrEmpty(key, "Key can not be null or empty");
+
+            using var provider = new DESCryptoServiceProvider
+            {
+                Key = HandleKey(key),
+                IV = IV?.Length == 8 ? IV : new byte[8]
+            };
             using var ct = provider.CreateDecryptor();
             using var ms = new MemoryStream();
             using var cs = new CryptoStream(ms, ct, CryptoStreamMode.Write);

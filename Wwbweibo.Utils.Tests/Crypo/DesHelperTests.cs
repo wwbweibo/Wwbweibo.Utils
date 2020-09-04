@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Core.Extensions.Utils;
-using Wwbweibo.Utils.Crypto;
 
 namespace Wwbweibo.Utils.Crypto.Tests
 {
@@ -15,6 +12,18 @@ namespace Wwbweibo.Utils.Crypto.Tests
         {
             var text = "abc";
             var key = "111";
+
+            var encoded = DesHelper.DesEncrypt(text.ToBytes(), key.ToBytes(), new byte[0]);
+            var decoded = DesHelper.DesDecrypt(encoded, key.ToBytes(), new byte[0]);
+            Assert.AreEqual(text, decoded.GetString());
+        }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod()]
+        public void DesDecrypt_VeryLongKey_Test()
+        {
+            var text = "abc";
+            var key = "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
 
             var encoded = DesHelper.DesEncrypt(text.ToBytes(), key.ToBytes(), new byte[0]);
             var decoded = DesHelper.DesDecrypt(encoded, key.ToBytes(), new byte[0]);
