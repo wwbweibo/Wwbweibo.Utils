@@ -1,8 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using Core.Extensions.Utils;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Wwbweibo.Utils.Crypto;
 
-namespace Wwbweibo.Utils.Crypto.Tests
+namespace Wwbweibo.Utils.Tests.Crypto
 {
     [TestClass()]
     public class DesHelperTests
