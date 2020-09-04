@@ -20,8 +20,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1' 
-      - name: Pull Repo
-        uses: wwbweibo/Wwbweibo.Utils@master
       - name: run test
         run:
           dotnet test
