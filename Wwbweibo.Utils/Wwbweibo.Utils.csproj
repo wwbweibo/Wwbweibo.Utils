@@ -7,6 +7,7 @@
     <Description>A Collection of .Net Utils</Description>
     <LangVersion>latest</LangVersion>
     <Version>1.0.0.1</Version>
+    <PackageProjectUrl>https://github.com/wwbweibo/Wwbweibo.Utils</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
