@@ -5,11 +5,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>wwbweibo</Authors>
     <Description>A Collection of .Net Utils</Description>
+    <LangVersion>latest</LangVersion>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Crypo\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
