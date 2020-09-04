@@ -2,10 +2,10 @@
 
 ![BuildStatus](https://github.com/wwbweibo/Wwbweibo.Utils/workflows/build/badge.svg)
 
-Current version is `1.0.0.1`, to install please run the command blow:
+Current version is `1.0.0.2`, to install please run the command blow:
 
 ``` bash
-Install-Package Wwbweibo.Utils -Version 1.0.0.1
+Install-Package Wwbweibo.Utils -Version 1.0.0.2
 ```
 
 `Extensions`: 包含一些常用的扩展类  

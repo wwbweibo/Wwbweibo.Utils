@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wwbweibo.Utils", "Wwbweibo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wwbweibo.Utils.Tests", "Wwbweibo.Utils.Tests\Wwbweibo.Utils.Tests.csproj", "{AD3A0048-90B6-4DAC-AC44-4A200DA5DB3E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81EF2423-7E62-4436-8E22-9FA029E55242}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E05B9853-54E0-47C9-8E25-6D235E675D6D}"
 	ProjectSection(SolutionItems) = preProject
-		Readmd.md = Readmd.md
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Global
