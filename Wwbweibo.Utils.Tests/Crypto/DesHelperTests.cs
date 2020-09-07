@@ -1,7 +1,7 @@
 ﻿using System;
-using Core.Extensions.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Wwbweibo.Utils.Crypto;
+using Wwbweibo.Utils.Extensions;
 
 namespace Wwbweibo.Utils.Tests.Crypto
 {
