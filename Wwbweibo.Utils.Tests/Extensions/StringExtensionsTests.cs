@@ -74,5 +74,19 @@ namespace Wwbweibo.Utils.Extensions.Tests
             string a = "a";
             Assert.AreEqual(10.1f, a.ToFloat(value: 10.1f));
         }
+
+        [TestMethod]
+        public void Base64EncodeTest()
+        {
+            string a = "a";
+            Assert.AreEqual("YQ==", a.Base64Encode());
+        }
+
+        [TestMethod]
+        public void Base64DecodeTest()
+        {
+            string a = "YQ==";
+            Assert.AreEqual("a", a.Base64Decode());
+        }
     }
 }

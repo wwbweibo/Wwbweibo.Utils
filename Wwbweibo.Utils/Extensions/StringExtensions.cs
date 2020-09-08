@@ -46,5 +46,17 @@ namespace Wwbweibo.Utils.Extensions
                 throw new FormatException("the input value is not valid");
             return value;
         }
+
+        public static string Base64Encode(this string str, string encoding = "UTF-8")
+        {
+            var bytes = Encoding.GetEncoding(encoding).GetBytes(str);
+            return Convert.ToBase64String(bytes);
+        }
+
+        public static string Base64Decode(this string str, string encoding = "UTF-8")
+        {
+            var data = Convert.FromBase64String(str);
+            return Encoding.GetEncoding(encoding).GetString(data);
+        }
     }
 }
