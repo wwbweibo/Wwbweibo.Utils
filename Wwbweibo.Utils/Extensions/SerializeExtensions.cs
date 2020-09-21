@@ -31,8 +31,16 @@ namespace Wwbweibo.Utils.Extensions
             }
         }
 
-        public static string JsonSerialize(this object obj)
+        public static string JsonSerialize(this object obj, bool camelCase=false)
         {
+            if (camelCase)
+            {
+                var setting = new JsonSerializerSettings
+                {
+                    ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+                };
+                return JsonConvert.SerializeObject(obj, setting);
+            }
             return JsonConvert.SerializeObject(obj);
         }
 
