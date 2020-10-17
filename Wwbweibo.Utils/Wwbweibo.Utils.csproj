@@ -6,12 +6,16 @@
     <Authors>wwbweibo</Authors>
     <Description>A Collection of .Net Utils</Description>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.0.8</Version>
+    <Version>1.0.0.9</Version>
     <PackageProjectUrl>https://github.com/wwbweibo/Wwbweibo.Utils</PackageProjectUrl>
     <PackageVersion>1.0.0.8</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reflect\" />
   </ItemGroup>
 </Project>
