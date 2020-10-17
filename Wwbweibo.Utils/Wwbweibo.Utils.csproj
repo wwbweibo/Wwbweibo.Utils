@@ -6,8 +6,9 @@
     <Authors>wwbweibo</Authors>
     <Description>A Collection of .Net Utils</Description>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.0.7</Version>
+    <Version>1.0.0.8</Version>
     <PackageProjectUrl>https://github.com/wwbweibo/Wwbweibo.Utils</PackageProjectUrl>
+    <PackageVersion>1.0.0.8</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
